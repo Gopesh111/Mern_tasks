@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form </title>
+<style>
+       
+    /* CSS for table-like layout */
+    .form-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        max-width: 800px; /* Adjust as needed */
+        margin: 0 auto; /* Center the form on the page */
+        border: 1px solid #000; /* Border around the entire form */
+    }
+    .form-container div {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        border-bottom: 1px solid #000; /* Bottom border for each row */
+        border-right: 1px solid #000; /* Right border for each cell */
+    }
+    .form-container div p {
+        margin: 0; /* Remove default margin for paragraphs */
+        width: 20px; /* Fixed width for labels (adjust as needed) */
+    }
+    .form-container div input,
+    .form-container div select,
+    .form-container div textarea {
+        width: 100%; /* Make inputs fill the remaining space */
+        padding: 5px;
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+    .form-container div.checkbox-group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center; 
+    }
+    .form-container div:last-child {
+        border-bottom: none; /* Remove bottom border from the last row */
+    }
+    .form-container div div {
+        border-right: none; /* Remove inner border in the second column */
+        padding: 0; /* Remove padding for inner divs */
+    }
+    .form-container div.checkbox-group input {
+        width: auto; /* Adjust checkbox width */
+    }
+    .form-container .declaration {
+        grid-column: 1 / span 1;
+        display: flex;
+        align-items: left;
+        padding: 10px;
+        border-bottom: none; /* Remove bottom border */
+        border-right: none; /* Remove right border */
+    }
+    .form-container .declaration label {
+        margin: 0; /* Remove default margin for labels */
+        padding-left: 0px; /* Space between checkbox and label */
+        white-space: nowrap; /* Prevent label text from wrapping */
+    }
+    .form-container .declaration input {
+        margin-right: 0px; /* Space between checkbox and label */
+    }
+</style>
+</head>
+<body>
+    <p style="font-size:25px; font-weight: bold; color: blue; text-align: center;">Registration Form</p>
+    <form>
+        <div class="form-container">
+            <div>
+                <p>First Name</p>
+            </div>
+            <div>
+                <input type="text">
+            </div>
+            <div>
+                <p>Last Name</p>
+            </div>
+            <div>
+                <input type="text">
+            </div>
+            <div>
+                <p>Email</p>
+            </div>
+            <div>
+                <input type="email">
+            </div>
+            <div>
+                <p>Password</p>
+            </div>
+            <div>
+                <input type="password">
+            </div>
+            <div>
+                <p>Re-enter Password</p>
+            </div>
+            <div>
+                <input type="password">
+            </div>
+            <div>
+                <p>Gender:</p>
+            </div>
+            <div>
+                <input type="radio" id="male" name="gender" value="Male"> <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="Female"> <label for="female">Female</label>
+            </div>
+            <div>
+                <p>Age:</p>
+            </div>
+            <div>
+                <input type="number">
+            </div>
+            <div>
+                <p>Phone Number</p>
+            </div>
+            <div>
+                <input type="tel">
+            </div>
+            <div>
+                <p>Address</p>
+            </div>
+            <div>
+                <textarea></textarea>
+            </div>
+            <div>
+                <p>State</p>
+            </div>
+            <div>
+                <input type="text">
+            </div>
+            <div>
+                <p>Country</p>
+            </div>
+            <div>
+                <select>
+                    <option value="" selected disabled>Choose your Country</option>
+                    <option>India</option>
+                    <option>Nepal</option>
+                    <option>Switzerland</option>
+                </select>
+            </div>
+            <div>
+                <p>Languages Known</p>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" value="English"> English<br>
+                <input type="checkbox" value="Kannada"> Kannada<br>
+                <input type="checkbox" value="Hindi"> Hindi<br>
+                <input type="checkbox" value="Telugu"> Telugu<br>
+            </div>
+            <div class="declaration">
+                <input type="checkbox" id="declaration" value="true">
+                <label for="declaration">Hereby I declare all the given details are true</label>
+            </div>
+        </div>
+        <div style="grid-column: 1 / span 2; text-align: center; padding: 10px;">
+            <button type="submit">Register</button>
+        </div>
+    </form>
+</body>
+</html>
