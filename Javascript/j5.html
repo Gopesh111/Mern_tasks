@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            margin-top: 200px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; 
+        }
+
+        form div {
+            display: flex;
+            align-items: center;
+        }
+
+        p,button {
+            width: 150px; 
+            margin: 0;
+            text-align: right;
+            font-size: 20px;
+        }
+
+        textarea,input, select {
+            flex-grow: 1; 
+            margin-left: 80px; 
+        }
+        button{
+            width: auto;
+            height:auto;
+            margin-left: 200px;
+        
+        }
+        select{
+            width: auto;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div>
+            <p>Name</p>
+            <input type="text" required>
+        </div>
+        <div>
+            <p>Email</p>
+            <input type="email" required>
+        </div>
+        <div>
+            <p>Website</p>
+            <input type="url" required>
+        </div>
+        <div>
+            <p>Message</p>
+            <textarea required></textarea>
+        </div>
+        <div>
+        <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>

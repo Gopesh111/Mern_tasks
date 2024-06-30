@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .button-group {
+            margin-bottom: 20px;
+        }
+        .button-group button {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #dbe4ee;
+            color: black;
+            cursor: pointer;
+        }
+        .button-group button:hover {
+            background-color: #d1d8de;
+        }
+        .output {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Show Date and Time</h1>
+
+    <div class="button-group">
+        <button onclick="showDate()">Show Date</button>
+        <div id="dateOutput" class="output"></div>
+    </div>
+
+    <div class="button-group">
+        <button onclick="showTime()">Show Time</button>
+        <div id="timeOutput" class="output"></div>
+    </div>
+
+    <script>
+        function showDate() {
+            const now = new Date();
+            const dateStr = `${now.getDate()}/${getMonthName(now.getMonth())}/${now.getFullYear()}`;
+            document.getElementById('dateOutput').innerText = dateStr;
+        }
+
+        function showTime() {
+            const now = new Date();
+            document.getElementById('timeOutput').innerText = now.toString();
+        }
+
+        function getMonthName(monthIndex) {
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            return months[monthIndex];
+        }
+    </script>
+</body>
+</html>

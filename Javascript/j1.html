@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Number</title>
+</head>
+<body>
+    <h1>Reverse Number Function</h1>
+    <p>Open the console to see the results of the reverse number function.</p>
+
+    <script>
+        function reverseNumber(num) {
+            // Determine if the number is negative
+            const isNegative = num < 0;
+            
+            // Convert the number to a string and take the absolute value to handle negative numbers
+            const numStr = Math.abs(num).toString();
+            
+            // Split the string into an array of characters, reverse the array, and join it back into a string
+            const reversedStr = numStr.split('').reverse().join('');
+            
+            // Convert the reversed string back to a number
+            const reversedNum = parseInt(reversedStr, 10);
+            
+            // If the original number was negative, make the reversed number negative
+            return isNegative ? -reversedNum : reversedNum;
+        }
+
+        // Example usage:
+        const x = 32243;
+        const result = reverseNumber(x);
+        console.log(`Reversed number for ${x} is: ${result}`);  // Expected Output: 34223
+    </script>
+</body>
+</html>

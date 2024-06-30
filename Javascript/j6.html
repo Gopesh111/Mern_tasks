@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+        }
+        .login-container {
+            width: 350px;
+            padding: 20px;
+            border: 1px solid #dbdbdb;
+            background-color: white;
+            text-align: center;
+        }
+        .login-container h1 {
+            font-family: 'Billabong', cursive;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            position: relative;
+            margin: 10px 0;
+        }
+        .input-group input {
+            width: 80%;
+            padding: 10px 10px 10px 40px;
+            margin: 5px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            background: #fafafa;
+        }
+        .input-group .fa {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+        }
+        .input-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3897f0;
+            border: none;
+            border-radius: 3px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .input-group button:hover {
+            background-color: #2980b9;
+        }
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .options .remember-me {
+            display: flex;
+            align-items: center;
+        }
+        .options .remember-me input {
+            margin-right: 5px;
+        }
+        .link {
+            color: #00376b;
+            text-decoration: none;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        .signup-container {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #dbdbdb;
+            background-color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="login-container">
+            <h1>Instagram</h1>
+            <form>
+                <div class="input-group">
+                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="input-group">
+                    <button type="submit">Log In</button>
+                </div>
+                <div class="options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        <label for="rememberMe">Remember Me</label>
+                    </div>
+                    <a href="#" class="link">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+        <div class="signup-container">
+            <p>Don't have an account? <a href="#" class="link">Sign up here</a></p>
+        </div>
+    </div>
+</body>
+</html>

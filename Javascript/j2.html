@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabetize String</title>
+</head>
+<body>
+    <h1>Alphabetize String Function</h1>
+    <p>Open the console to see the result of the alphabetize string function.</p>
+
+    <script>
+        function alphabetizeString(str) {
+            // Convert the string to an array of characters, sort the array, and join it back into a string
+            return str.split('').sort().join('');
+        }
+
+        // Example usage:
+        const exampleString = 'webmaster';
+        const result = alphabetizeString(exampleString);
+        console.log(`Alphabetized string for "${exampleString}" is: "${result}"`);  // Expected Output: 'abeemrstw'
+    </script>
+</body>
+</html>
